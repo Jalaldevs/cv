@@ -4,15 +4,12 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>My CV</title>
-        <link rel="" href=" type="">
+        <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAABDlBMVEVHcEz/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/Bwf/BwexNIsoAAAAWXRSTlMA6dIaAQYb2xUPjv4Do36b90wK07k4n81rri0OvVt/5iLrzPANUPX6vFpfIcZF6mkHSu/Qu1k6fV4/xYcq8xA0/ePoBapIbPyrPssew2D5l+R7Gch6kpHJTewRH9MAAAIBSURBVFjD3ZdrWwFBGIYXe2RbJOVUokSFnAnlkNIBnQ/z//9IwxZrzazZmT71fH3c93WxduZ9Oe6/5TRX3S1GrtDlVaS4W82d4umaNw5m8WXOFHOpnGV8ehv31pB4sAkMuWhdGsvL1oWxbQZX8MK7Byynn1q0qb6p9HwUlnn5E6zGreql6kaUr7KRd0kAlVthWgq3yFJ6WfCHZYDOBs9x/AamLB/OBQOAi8ZxGrYc/PIN7EfA8O5uiG8bP0/Ygf8IkCSL0qH/WzRAHW32IzvoBY7pY/oCDPFDgZdF4IUCJ4vACQU+FoEPCgBT/kIwYeEnUPDEIniCghGLYAQFjyyCRygYswjGUPDAIniYvk339Pz97HW+oRfczATREi1fiupH0h6tYI8jONPWn2gwJ3SCk/mxzm/R8Fu84WZK2OcTLuPddt21y3evl2/XZ7uCN9P1jr0BLW7N5QgxO3xMWJ1QlCQ5n1RQM45MfMA7ZfSQ5ZLIeMmFG9NEIoMk4gc9EoMVT/I74L7/3LBjze/I64ZdJWvFZ5X14/JmBc9XNkkGbiGM48MC2ciubqP5bZV06OdRsy1w8zb2hvoqX7e3eYRMw7snZHd3OU4b+fSx/e3Hf7Tgj/w0+9P5wS9/cE63gXXyOp/v0O5w7d6U77Xpt8B9+HpL+yx7pBgIiGybqCxz/z7fNpYvHBsljFEAAAAASUVORK5CYII=" type="image/png">
         <style>
             *{
                 margin: 0;
                 padding: 0;
                 box-sizing: border-box;
-            }
-            .body_wrapper{
-                height: 100dvh;
             }
             :root{
                 --blue-color: #4488ee;
@@ -28,6 +25,8 @@
             }
             h1{
                 font-size: 2.7rem;
+                color: var(--blue-color);
+                text-shadow: 1px 1px 1px gray;
             }
             .image_container{
                 border-radius: 50%;
@@ -39,26 +38,43 @@
                 height: 100px;
             }
             main{
-                padding: 0 8rem;
-            }
-            .main_wrapper{
-                margin-top: 2rem;
+                padding: 1.5rem 8rem;
             }
             .main_wrapper{
                 display: flex;
+                gap: 5rem;
+                margin-top: 1rem;
+            }
+            .flex_left{
+                width: 65%;
+            }
+            .flex_right{
+                display: flex;
                 flex-direction: column;
-                gap: 1rem;
+                justify-content: center;
             }
             .main_wrapper h3{
                 font-size: 1.8rem;
                 margin-bottom: 6px;
+                color: var(--blue-color);
+            }
+            .about_section, .experience_section {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            table{
+                width: 50%;
+            }
+            td, th{
+                border: 1px solid #000;
+                padding: 4px;
+            }
+            hr{
+                margin: 2rem 0;
             }
             .skills_ul{
-                padding-left: 2rem;
-            }
-            footer{
-                text-align: center;
-                font-weight: 600;
+                padding-top: 10px;
             }
         </style>
     </head>
@@ -67,7 +83,7 @@
             <header>
                 <div class="header_info">
                     <h1>Jalal Charraout</h1>
-                    <h2>Software engineer</h2>
+                    <h2><i>Software engineer</i></h2>
                 </div>
                 <div class="header_image">
                     <div class="image_container">
@@ -77,46 +93,68 @@
             </header>
             <main>
                 <div class="main_wrapper">
-                    <section class="about_section">
-                        <h3>About Me</h3>
-                        <p>Hello! My name is Jalal, and I am a passionate web developer with a strong interest in creating interactive and visually appealing websites. I enjoy learning new technologies and experimenting with modern design techniques to deliver engaging user experiences. In my free time, I like to explore new programming languages, work on personal projects, and stay updated with the latest trends in web development.</p>
-                    </section>
-                    <hr>
-                    <section class="experience">
-                        <h3>My Experience</h3>
-                        <p>I have worked on several web development projects, ranging from small personal websites to more complex applications. I am proficient in HTML, CSS, and JavaScript, and I have experience working with frameworks such as React and Node.js. During my previous internship at a local tech company, I collaborated with a team to develop a responsive e-commerce site, improving its performance and user interface. I also enjoy participating in coding challenges to sharpen my problem-solving skills and expand my knowledge in software development.</p>
-                    </section>                    
-                    <hr>
-                    <section class="studies_section">
-                        <h3>My Studies</h3>
-                        <p>I studied at <abbr title="Instituto de Educación Secundaria."><b>IES</abbr> Severo Ochoa.</b></p>
-                    </section>
-                    <hr>
-                    <section class="skills_section">
-                        <h3>My Skills</h3>
-                        <ul class="skills_ul">
-                            <li>HTML & CSS</li>
-                            <li>JavaScript & React</li>
-                            <li>SQL & Database Management</li>
-                            <li>Version Control with Git</li>
-                            <li>Responsive Web Design</li>
-                            <li>Problem Solving & Debugging</li>
-                        </ul>
-                    </section>
-                    <hr>
-                    <section class="contact_section">
-                        <h3>My Contact</h3>
-                        <address>
-                            <a href="#">jalal@example.com</a><br>
-                            123 Main Street, Madrid, Spain<br>
-                            Phone: +34 600 123 456
-                        </address>
-                    </section>
+                    <div class="flex_left">
+                        <section class="about_section">
+                            <h3>About Me</h3>
+                            <p>Hello! My name is Jalal, and I am a passionate web developer with a strong interest in creating interactive and visually appealing websites. I enjoy learning new technologies and experimenting with modern design techniques to deliver engaging user experiences. In my free time, I like to explore new programming languages, work on personal projects, and stay updated with the latest trends in web development.</p>
+                        </section>
+                        <hr>
+                        <section class="experience_section">
+                            <h3>My Experience</h3>
+                            <table>
+                                <tr>
+                                    <th>Area</th>
+                                    <th>Details</th>
+                                </tr>
+                                <tr>
+                                    <td>Projects</td>
+                                    <td>Worked on personal websites and complex web applications.</td>
+                                </tr>
+                                <tr>
+                                    <td>Skills</td>
+                                    <td>Proficient in HTML, CSS, JavaScript. Experienced with React and Node.js.</td>
+                                </tr>
+                                <tr>
+                                    <td>Internship</td>
+                                    <td>Collaborated on a responsive e-commerce site at a local tech company, improving performance and user interface.</td>
+                                </tr>
+                                <tr>
+                                    <td>Problem-Solving</td>
+                                    <td>Participated in coding challenges to sharpen problem-solving skills and broaden software development knowledge.</td>
+                                </tr>
+                            </table>
+                        </section>                 
+                        <hr>
+                    </div>
+                    <div class="flex_right">
+                        <section class="studies_section">
+                            <h3>My Studies</h3>
+                            <p>I studied at <abbr title="Instituto de Educación Secundaria."><b>IES</abbr> Severo Ochoa.</b></p>
+                        </section>
+                        <hr>
+                        <section class="skills_section">
+                            <h3>My Skills</h3>
+                            <ul class="skills_ul">
+                                <li>HTML & CSS</li>
+                                <li>JavaScript & React</li>
+                                <li>SQL & Database Management</li>
+                                <li>Version Control with Git</li>
+                                <li>Responsive Web Design</li>
+                                <li>Problem Solving & Debugging</li>
+                            </ul>
+                        </section>
+                        <hr>
+                        <section class="contact_section">
+                            <h3>My Contact</h3>
+                            <address>
+                                <a href="#">jalal@example.com</a><br>
+                                123 Main Street, Madrid, Spain<br>
+                                Phone: +34 600 123 456
+                            </address>
+                        </section>
+                    </div>
                 </div>
             </main>
-            <footer>
-                <p>CODED BY JALAL</p>
-            </footer>
         </div>
     </body>
 </html>
